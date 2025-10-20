@@ -4,18 +4,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>CloudOpsExpert - DevOps & Cloud Computing Experts | Real-Time Cloud Service Monitoring</title>
+  <meta name="title" content="CloudOpsExpert - DevOps & Cloud Computing Experts | Real-Time Cloud Service Monitoring">
   <meta name="description"
-    content="CloudOpsExpert - Your ultimate resource for DevOps, Cloud Computing, and Infrastructure as Code. Expert insights, tutorials, and professional services.">
+    content="CloudOpsExpert delivers enterprise-grade DevOps solutions and cloud computing expertise. Access our real-time cloud service status dashboard monitoring AWS, Azure, GitHub, npm, Docker Hub, Cloudflare, Vercel, and 15+ critical developer tools in one centralized view.">
   <meta name="keywords"
-    content="DevOps, Cloud Computing, Infrastructure as Code, Cloud Operations, AWS, Azure, GCP, Kubernetes, Docker">
+    content="DevOps experts, Cloud Computing services, Infrastructure as Code, IaC, Cloud Operations, AWS status, Azure status, GitHub status, npm status, Docker Hub status, Cloudflare status, Vercel status, Bitbucket status, Jira status, Confluence status, Opsgenie status, cloud status dashboard, service monitoring, uptime monitoring, cloud outage tracker, DevOps monitoring tools, Kubernetes consulting, CI/CD pipeline, cloud migration, real-time status monitoring">
   <meta name="author" content="CloudOpsExpert">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="CloudOpsExpert - DevOps & Cloud Computing Experts">
-  <meta property="og:description"
-    content="Expert insights, tutorials, and professional services in DevOps and Cloud Computing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.cloudopsexpert.com/">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.svg">
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cloudopsexpert.com">
-  <title>CloudOpsExpert - DevOps & Cloud Computing Experts</title>
+  <meta property="og:url" content="https://www.cloudopsexpert.com/">
+  <meta property="og:site_name" content="CloudOpsExpert">
+  <meta property="og:title" content="CloudOpsExpert - DevOps & Cloud Computing Experts | Real-Time Cloud Service Monitoring">
+  <meta property="og:description"
+    content="Enterprise-grade DevOps solutions and cloud computing expertise. Monitor 15+ cloud services including AWS, Azure, GitHub, npm, Docker Hub, Cloudflare, and Vercel in real-time with our status dashboard.">
+  <meta property="og:image" content="https://www.cloudopsexpert.com/logo.svg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.cloudopsexpert.com/">
+  <meta name="twitter:title" content="CloudOpsExpert - DevOps & Cloud Computing Experts">
+  <meta name="twitter:description"
+    content="Enterprise DevOps solutions. Monitor 15+ cloud services including AWS, Azure, GitHub, npm, Docker Hub, Cloudflare, and Vercel in real-time.">
+  <meta name="twitter:image" content="https://www.cloudopsexpert.com/logo.svg">
+
+  <!-- Additional SEO -->
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Structured Data / Schema.org for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CloudOpsExpert",
+    "url": "https://www.cloudopsexpert.com",
+    "logo": "https://www.cloudopsexpert.com/logo.svg",
+    "description": "Enterprise-grade DevOps solutions, cloud computing expertise, and real-time cloud service status monitoring",
+    "sameAs": [
+      "https://status.cloudopsexpert.com"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "availableLanguage": "English"
+    },
+    "areaServed": "Worldwide",
+    "serviceType": [
+      "DevOps Consulting",
+      "Cloud Computing",
+      "Infrastructure as Code",
+      "Cloud Migration",
+      "System Monitoring",
+      "Cloud Status Dashboard"
+    ]
+  }
+  </script>
   <style>
     * {
       margin: 0;
@@ -33,12 +90,14 @@
       align-items: center;
       justify-content: center;
       overflow-x: hidden;
+      padding: 1rem;
     }
 
     .container {
       text-align: center;
       padding: 3rem;
-      max-width: 800px;
+      max-width: 900px;
+      width: 100%;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 20px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -59,6 +118,20 @@
       100% {
         transform: translateY(0px);
       }
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      animation: fadeIn 1s ease-in;
     }
 
     h1 {
@@ -158,7 +231,6 @@
 
     .tech-icon {
       font-size: 2rem;
-      color: #1a2a6c;
       transition: transform 0.3s ease;
     }
 
@@ -166,10 +238,131 @@
       transform: scale(1.2);
     }
 
-    @media (max-width: 600px) {
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 1.5rem 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    .status-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+    }
+
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      text-align: left;
+    }
+
+    .service-item {
+      background: linear-gradient(135deg, rgba(26, 42, 108, 0.05) 0%, rgba(178, 31, 31, 0.05) 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 4px solid #1a2a6c;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item h3 {
+      color: #1a2a6c;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-item p {
+      color: #666;
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .status-section {
+      margin: 2.5rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+      border-radius: 15px;
+      border: 2px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .status-section h2 {
+      color: #1a2a6c;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .monitored-services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .service-tag {
+      background: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1a2a6c;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .service-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .cta-section {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 2px solid rgba(26, 42, 108, 0.1);
+    }
+
+    @media (max-width: 768px) {
       .container {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
         margin: 1rem;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
       }
 
       h1 {
@@ -183,30 +376,125 @@
       p {
         font-size: 1.1rem;
       }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .status-badge {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.5rem;
+      }
+
+      .status-section {
+        padding: 1.5rem;
+      }
+
+      .status-section h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>CloudOpsExpert</h1>
-    <div class="coming-soon">Coming Soon</div>
-    <p>We're crafting something extraordinary! CloudOpsExpert will be your ultimate destination for:</p>
-    <p>
-      <span class="highlight">DevOps</span> •
-      <span class="highlight">Cloud Computing</span> •
-      <span class="highlight">Infrastructure as Code</span> •
-      <span class="highlight">Best Practices</span>
-    </p>
-    <div class="tech-icons">
-      <span class="tech-icon">☁️</span>
-      <span class="tech-icon">⚡</span>
-      <span class="tech-icon">🔧</span>
-      <span class="tech-icon">🚀</span>
-    </div>
-    <p>Get ready for cutting-edge insights, hands-on tutorials, and professional services that will transform your cloud
-      operations journey.</p>
-  </div>
+  <main class="container">
+    <header>
+      <div class="logo-container">
+        <img src="logo.svg" alt="CloudOpsExpert Logo - DevOps and Cloud Computing Experts" class="logo">
+        <h1>CloudOpsExpert</h1>
+      </div>
+      <div class="coming-soon">Coming Soon</div>
+    </header>
+
+    <section aria-label="Status Dashboard" class="status-section">
+      <h2>Real-Time Cloud Service Status Dashboard</h2>
+      <p>Monitor the health and performance of 15+ critical cloud services and developer tools - all in one centralized dashboard.</p>
+
+      <a href="https://status.cloudopsexpert.com/"
+         class="status-badge"
+         target="_blank"
+         rel="noopener noreferrer"
+         title="Check Real-Time Status of AWS, Azure, GitHub, npm, Docker Hub, Cloudflare, Vercel and More"
+         aria-label="View comprehensive cloud service status dashboard">
+        <span class="status-indicator" aria-hidden="true"></span>
+        <span>View Live Status Dashboard →</span>
+      </a>
+
+      <div class="monitored-services">
+        <span class="service-tag">AWS</span>
+        <span class="service-tag">Azure</span>
+        <span class="service-tag">Google Cloud</span>
+        <span class="service-tag">GitHub</span>
+        <span class="service-tag">npm</span>
+        <span class="service-tag">Docker Hub</span>
+        <span class="service-tag">Cloudflare</span>
+        <span class="service-tag">Vercel</span>
+        <span class="service-tag">GitLab</span>
+        <span class="service-tag">Heroku</span>
+        <span class="service-tag">DigitalOcean</span>
+        <span class="service-tag">Bitbucket</span>
+        <span class="service-tag">Jira</span>
+        <span class="service-tag">Confluence</span>
+        <span class="service-tag">Opsgenie</span>
+      </div>
+
+      <p style="font-size: 1rem; color: #666; margin-top: 1rem;">Stay informed about infrastructure health, API availability, and real-time performance metrics for all major cloud platforms and DevOps tools.</p>
+    </section>
+
+    <section aria-label="Introduction">
+      <p>We're crafting something extraordinary! CloudOpsExpert is your trusted partner for enterprise-grade cloud solutions and DevOps excellence.</p>
+      <p>
+        <span class="highlight">DevOps Automation</span> •
+        <span class="highlight">Cloud Computing</span> •
+        <span class="highlight">Infrastructure as Code</span> •
+        <span class="highlight">Best Practices</span>
+      </p>
+    </section>
+
+    <section aria-label="Technology Focus">
+      <div class="tech-icons">
+        <span class="tech-icon" role="img" aria-label="Cloud">☁️</span>
+        <span class="tech-icon" role="img" aria-label="Performance">⚡</span>
+        <span class="tech-icon" role="img" aria-label="Tools">🔧</span>
+        <span class="tech-icon" role="img" aria-label="Deployment">🚀</span>
+        <span class="tech-icon" role="img" aria-label="Monitoring">📊</span>
+        <span class="tech-icon" role="img" aria-label="Security">🔒</span>
+      </div>
+    </section>
+
+    <section aria-label="Services" class="services-grid">
+      <article class="service-item">
+        <h3>Cloud Migration</h3>
+        <p>Seamlessly migrate your infrastructure to AWS, Azure, or GCP with zero downtime and optimized performance.</p>
+      </article>
+      <article class="service-item">
+        <h3>DevOps Consulting</h3>
+        <p>Expert guidance on CI/CD pipelines, automation strategies, and modern DevOps best practices for your team.</p>
+      </article>
+      <article class="service-item">
+        <h3>Infrastructure as Code</h3>
+        <p>Implement scalable, version-controlled infrastructure using Terraform, CloudFormation, and Ansible.</p>
+      </article>
+      <article class="service-item">
+        <h3>Container Orchestration</h3>
+        <p>Deploy and manage Kubernetes clusters with Docker containerization for enhanced scalability and reliability.</p>
+      </article>
+      <article class="service-item">
+        <h3>Cloud Monitoring</h3>
+        <p>Real-time monitoring and alerting for cloud services, APIs, and infrastructure health across multiple platforms.</p>
+      </article>
+      <article class="service-item">
+        <h3>Security & Compliance</h3>
+        <p>Implement security best practices, compliance frameworks, and automated security scanning for cloud environments.</p>
+      </article>
+    </section>
+
+    <section aria-label="Call to Action" class="cta-section">
+      <p>Get ready for cutting-edge insights, hands-on tutorials, comprehensive guides, and professional cloud infrastructure services that will transform your DevOps journey and accelerate your cloud operations.</p>
+    </section>
+  </main>
 </body>
 
 </html>
